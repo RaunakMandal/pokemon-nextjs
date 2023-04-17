@@ -14,10 +14,8 @@ export default function SinglePokemon() {
     const { name } = router.query
 
     const [pokemon, setPokemon] = useState(null);
-    const [evolutions, setEvolutions] = useState(null);
 
     const [loading, setLoading] = useState(true);
-    const [showEvolutions, setShowEvolutions] = useState(false)
 
     const getPokemon = async () => {
         const { data } = await client.query({
@@ -54,7 +52,6 @@ export default function SinglePokemon() {
 
     const getEvolutions = async () => {
         //
-        console.log('getEvolutions')
     }
 
     useEffect(() => {
@@ -104,12 +101,12 @@ export default function SinglePokemon() {
                                             ))}
                                         </span>
                                     </div>
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={getEvolutions}>Show Evolutions</button>
+                                    {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={getEvolutions}>Show Evolutions</button> */}
                                 </div>
                             </div>
-                            {showEvolutions &&
+                            {/* {showEvolutions &&
                                 <Evolutions />
-                            }
+                            } */}
                         </div>
                     </div>
                 )}

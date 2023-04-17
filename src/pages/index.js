@@ -21,9 +21,9 @@ export default function Home({ pokemons }) {
             ))
           }
         </main>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Load More
-        </button>
+        </button> */}
       </div >
     </Base>
   )
@@ -56,7 +56,7 @@ export async function getStaticProps() {
       }
     }`,
     variables: {
-      first: 20,
+      first: 60,
     },
   });
 
